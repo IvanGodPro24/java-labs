@@ -5,10 +5,8 @@ public class Main {
 
         Card s1 = registry.issueTimeCard("Студентська", 30);
         Card s2 = registry.issueTripsCard("Учнівська", 5);
-        Card s3 = registry.issueAccumCard(10);
-        Card s4 = registry.issueTripsCard("Учнівська", 1);
-
-
+        Card s3 = registry.issueAccumCard("Звичайна", 9);
+        Card s4 = registry.issueTripsCard("Учнівська", 10);
 
         turnstile.checkCard(s1);
         turnstile.checkCard(s2);

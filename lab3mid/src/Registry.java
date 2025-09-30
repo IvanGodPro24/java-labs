@@ -16,7 +16,11 @@ public class Registry {
         return c;
     }
 
-    public Card issueAccumCard(double balance) {
+    public Card issueAccumCard(String type, double balance) {
+        if (!"Звичайна".equals(type)) {
+            throw new IllegalArgumentException("Накопичувальні картки можуть бути тільки звичайного типу!");
+        }
+
         Card c = new AccumCard(UUID.randomUUID().toString(), balance);
         cards.add(c);
         return c;
